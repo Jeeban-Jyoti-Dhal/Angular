@@ -3,21 +3,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { AppComponent } from './app.component';
-import { customersComponent } from './component/customers.component';
+import { JavaComponent } from './component/java.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    customersComponent
+    JavaComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgHttpLoaderModule.forRoot()
-    
+
   ],
   providers: [],
-  bootstrap: [customersComponent]
+  bootstrap: [JavaComponent]
 })
 export class AppModule { }
