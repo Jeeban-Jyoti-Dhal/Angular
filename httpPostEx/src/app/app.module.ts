@@ -1,16 +1,24 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgHttpLoaderModule } from 'ng-http-loader';
 import { AppComponent } from './app.component';
+import { UppercaseComponent } from './component/uppercase.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UppercaseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    NgHttpLoaderModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [UppercaseComponent]
 })
 export class AppModule { }
